@@ -6,4 +6,4 @@ jdk:
   - oraclejdk7
   - oraclejdk8
 
-script: mvn exec:java -Dexec.mainClass="org.paukov.combinatoricslibexample.Main"
+script: mvn package exec:java -Dexec.mainClass="org.paukov.combinatoricslibexample.Main"
