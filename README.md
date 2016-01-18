@@ -3,9 +3,8 @@
 # combinatoricslib-example
 This project contains code examples of how to use the [combinatoricslib](https://github.com/dpaukov/combinatoricslib)
 
-## how to build and execute the example
+## How to build and execute the examples
 
 ```
-mvn clean install
-java -jar target/combinatoricslib-example-1.0-SNAPSHOT.jar
+mvn package exec:java -Dexec.mainClass="org.paukov.combinatoricslibexample.Main"
 ```
