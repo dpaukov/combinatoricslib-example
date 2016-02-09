@@ -45,4 +45,25 @@ public class PermutationExample {
 
     }
 
+    static void generateAnagrams() {
+
+        System.out.println("===== Generate Anagrams: =====");
+
+        // Create the initial set/vector of 4 elements (apple, orange, cherry)
+        ICombinatoricsVector<String> originalVector = Factory
+                .createVector("aabc".split(""));
+
+        // Create the permutation generator.
+        // The generator can detect that the vector has duplicates
+        // and will treat them correctly
+        Generator<String> gen = Factory
+                .createPermutationGenerator(originalVector);
+
+        // Print 12 anagrams:
+        // aabc, aacb, abac, abca, acab, acba, baac, baca, bcaa, caab, caba, cbaa
+        for (ICombinatoricsVector<String> perm : gen)
+            System.out.println(perm);
+
+    }
+
 }
