@@ -9,7 +9,6 @@ public class Main {
          */
         PermutationExample.permutationWithoutRepetitions();
         PermutationExample.permutationWithRepetitions();
-        PermutationExample.generateAnagrams();
 
         /**
          * Combinations

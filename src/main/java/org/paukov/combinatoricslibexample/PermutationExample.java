@@ -1,69 +1,49 @@
 package org.paukov.combinatoricslibexample;
 
 
-import org.paukov.combinatorics.Factory;
+import static org.paukov.combinatorics.CombinatoricsFactory.createPermutationGenerator;
+import static org.paukov.combinatorics.CombinatoricsFactory.createPermutationWithRepetitionGenerator;
+import static org.paukov.combinatorics.CombinatoricsFactory.createVector;
+
 import org.paukov.combinatorics.Generator;
 import org.paukov.combinatorics.ICombinatoricsVector;
 
 public class PermutationExample {
 
-    static void permutationWithRepetitions() {
+  static void permutationWithRepetitions() {
 
-        System.out.println("===== Permutation With Repetitions: =====");
+    System.out.println("===== Permutation With Repetitions: =====");
 
-        // Create the initial set/vector of 2 elements (apple, orange)
-        ICombinatoricsVector<String> originalVector = Factory
-                .createVector(new String[]{"apple", "orange"});
+    // Create the initial set/vector of 2 elements (apple, orange)
+    ICombinatoricsVector<String> originalVector = createVector("apple", "orange", "chery");
 
-        // Create the generator by calling the appropriate method in the Factory
-        // class
-        Generator<String> gen = Factory
-                .createPermutationWithRepetitionGenerator(originalVector, 3);
+    // Create the generator by calling the appropriate method in the Factory
+    // class
+    Generator<String> gen = createPermutationWithRepetitionGenerator(originalVector, 2);
 
-        // Print the result
-        for (ICombinatoricsVector<String> perm : gen)
-            System.out.println(perm);
-
+    // Print the result
+    for (ICombinatoricsVector<String> perm : gen) {
+      System.out.println(perm);
     }
 
-    static void permutationWithoutRepetitions() {
+  }
 
-        System.out.println("===== Permutations Without Repetitions: =====");
+  static void permutationWithoutRepetitions() {
 
-        // Create the initial set/vector of 3 elements (apple, orange, cherry)
-        ICombinatoricsVector<String> originalVector = Factory
-                .createVector(new String[]{"apple", "orange", "cherry"});
+    System.out.println("===== Permutations Without Repetitions: =====");
 
-        // Create the permutation generator by calling the appropriate method in
-        // the Factory class
-        Generator<String> gen = Factory
-                .createPermutationGenerator(originalVector);
+    // Create the initial set/vector of 3 elements (apple, orange, cherry)
+    ICombinatoricsVector<String> originalVector = createVector("apple", "orange", "chery");
 
-        // Print the result
-        for (ICombinatoricsVector<String> perm : gen)
-            System.out.println(perm);
+    // Create the permutation generator by calling the appropriate method in
+    // the Factory class
+    Generator<String> gen = createPermutationGenerator(originalVector);
 
+    // Print the result
+    for (ICombinatoricsVector<String> perm : gen) {
+      System.out.println(perm);
     }
 
-    static void generateAnagrams() {
-
-        System.out.println("===== Generate Anagrams: =====");
-
-        // Create the initial set/vector of 4 elements (apple, orange, cherry)
-        ICombinatoricsVector<String> originalVector = Factory
-                .createVector("aabc".split(""));
-
-        // Create the permutation generator.
-        // The generator can detect that the vector has duplicates
-        // and will treat them correctly
-        Generator<String> gen = Factory
-                .createPermutationGenerator(originalVector);
-
-        // Print 12 anagrams:
-        // aabc, aacb, abac, abca, acab, acba, baac, baca, bcaa, caab, caba, cbaa
-        for (ICombinatoricsVector<String> perm : gen)
-            System.out.println(perm);
-
-    }
+  }
 
 }
