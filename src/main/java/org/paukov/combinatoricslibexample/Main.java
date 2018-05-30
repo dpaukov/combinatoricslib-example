@@ -4,16 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        /**
-         * Permutations
-         */
+        // Permutations
         PermutationExample.permutationWithoutRepetitions();
         PermutationExample.permutationWithRepetitions();
 
-        /**
-         * Combinations
-         */
+        // Combinations
         CombinationsExample.simpleCombinationsExample();
         CombinationsExample.multiCombinationsExample();
+
+        // Cartesian Product
+        CartesianProductExample.simpleExample();
     }
 }
