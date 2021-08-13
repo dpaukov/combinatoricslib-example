@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/dpaukov/combinatoricslib-example.png)](http://travis-ci.org/dpaukov/combinatoricslib-example)
+[![Build Status](https://travis-ci.com/dpaukov/combinatoricslib-example.svg?branch=master)](https://travis-ci.com/github/dpaukov/combinatoricslib-example)
 
 # combinatoricslib-example
 This project contains code examples of how to use [java combinatorics library](https://github.com/dpaukov/combinatoricslib)
